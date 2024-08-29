@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Arimo";
+}
+
+p {
+    font-family: "Arimo";
+    font-size: 2.1vh;
+    color: black;
+    margin: 20px 20px 20px 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a.username {
+    color: black;
+    text-decoration: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#myVideo {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.homeOverlay {
+    color: #f1f1f1;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.homeOverlay h1 {
+    font-family: "Figtree";
+    font-size: 9.5vw;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+.homeOverlay p {
+    font-family: "Figtree";
+    margin: 0px;
+    font-size: 30px;
+    color: white 
+}
+
+.homeButton{
+    font-family: "Figtree";
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    background-color: rgb(198, 21, 21);
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 20px;
+    width: 500px;
+    margin: 5px;
+    border: none;
+    transition: all 0.5s;
+}
+
+.homeButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.homeButton span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.homeButton:hover span {
+    padding-right: 45px;
+}
+  
+.homeButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Nav Bar ======================================= */
+.navbar {
+    font-family: 'Figtree';
+    color: white;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-right: auto;
+    
+}
+
+.navbar a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 14px 16px;
+    margin: 10px 40px;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.navbar a:hover {
+    color: white;
+    font-weight: bold;
+    background-color: red;
+}
+
+.navbar a.active {
+    color: white;
+    font-weight: bold;
+    background-color: red;
+}
+
+div.navbar img {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+div.navbar a.logo {
+    font-family: "Figtree";
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+div.navbar a.logo:hover {
+    color: white;
+    background-color: transparent;
+}
+
+
+/* Search Bar ======================================= */
+.search-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border: none;
+}
+  
+.search-input {
+    font-family: 'Manrope';
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    width: 20vw;
+    height: 3vh;
+    border: none;
+}
+  
+.search-dropdown {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    top: 90%;
+    width: 90%;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    position: absolute;
+}
+  
+.search-dropdown-item {
+    font-family: 'Manrope', sans-serif;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+  
+.search-dropdown-item:hover {
+    background-color: #ededed;
+}
+
+
+#goButton {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    background-color: transparent;
+    border-width: 0px;
+    top: 50%;
+    right: 60px;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    transform: translateY(-100%);
+    transition-duration: 0.4s;
+}
+
+#goButton.disabled{
+    cursor: not-allowed;
+}
+
+#goButton:not(.disabled):hover {
+    font-family: 'Manrope', sans-serif;;
+    background-color: transparent;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+/* "Tweets" ======================================= */
+.tweet-box,
+.profile-tweet-box {
+    font-family: "Arimo", sans-serif;
+    background-color: #fff;
+    border: 1px solid #eaebec;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.tweet-box{
+    width: 50vw;
+    padding: 20px;
+    margin: 10px;
+    margin-left: 110px;
+}
+
+.profile-tweet-box{
+    width: 42vw;
+    padding: 20px;
+    margin: 10px;
+}
+
+.profile-image-side,
+.profile-image {
+    border: 1px solid #dddfe2;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.tweet-content {
+    flex: 1;
+}
+
+.name {
+    font-size: 2.3vh;
+    font-weight: bold;
+    color: #1c1e21;
+}
+
+.meta {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.usernameDate {
+    font-size: 1.8vh;
+    color: #90949c;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+.tweet-text {
+    font-size: 2.2vh;
+    color: #1c1e21;
+    word-wrap: break-word;
+}
+
+.tweet-image {
+    border-radius: 12px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.tweet-actions {
+    font-size: 2.3vh;
+    max-width: 100%;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.action {
+    color: #657786;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.action i {
+    margin-right: 5px;
+}
+
+.action span {
+    font-size: 0.9em;
+}
+
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+
+.comments-section {
+    display: none;
+    margin-top: 20px;
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-text {
+    margin-top: 5px;
+}
+
+.comments-section.show-comments {
+    display: block; 
+}
+
+div.comment img {
+    object-fit: cover;
+}
+
+/* Side Panels  ======================================= */
+.sideBox,
+.info {
+    font-family: "Arimo", sans-serif;
+    background-color: #f5f8fa;
+    border: 1px solid #f5f8fa;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBox {
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    margin-right: 110px;
+}
+
+.info {
+    padding: 20px;
+    margin: 10px;
+    margin-left: 100px;
+}
+
+.sideTitle {
+    font-size: 3.2vh;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.sideSection1 {
+    border-top: 1px solid #ebedee;
+}
+
+.sideSection,
+.sideSection1 {
+    font-size: 2.5vh;
+    border-bottom: 1px solid #ebedee;
+    max-width: 100%;
+}
+
+.sideSubtitle {
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
+
+.sideFaintText {
+    font-size: 2.1vh;
+    color: #90949c;
+    margin: 0px;
+    margin-left: 40px;  
+    margin-bottom: 12px;
+}
+
+.profile-image-side {
+    margin: 12px;
+    margin-left: 0px;
+}
+
+.user1{
+    border-top: 1px solid #ebedee;
+}
+
+.user1,
+.user {
+    border-bottom: 1px solid #ebedee;
+    display: flex;
+    align-items: center;
+}
+
+.userInfoSide {
+    margin-left: 5px;
+}
+
+.side {
+    margin: 0px;
+}
+
+/* Profiles  ======================================= */
+
+.profile-banner {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 65vw;
+    height: 20vh;
+    padding: 20px;
+    margin: 10px;
+    margin-left: 110px;
+    border-radius: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info {
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: 15px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.name {
+    margin: 0;
+    font-size: 2.3vh;
+    color: black;
+}
+
+.profilename {
+    margin: 0;
+    font-size: 35px;
+    color: white;
+}
+
+.username, .status {
+    margin: 5px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.profileTweets {
+    width: 100%;
+    float: left;
+}
